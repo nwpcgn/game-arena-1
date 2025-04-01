@@ -1,100 +1,103 @@
 <script lang="ts">
-	import type { Scene } from 'phaser'
-	import type { MainMenu } from '../../game/scenes/MainMenu'
-	import PhaserGame, { type TPhaserRef } from '../../game/PhaserGame.svelte'
+	import { AUTO, Game, Types } from 'phaser'
 
-	// The sprite can only be moved in the MainMenu Scene
-	let canMoveSprite = false
+	let config = $state.raw({
+		type: AUTO,
+		width: 800,
+		height: 600,
+		parent: 'game-container',
+		backgroundColor: '#028af8',
+		physics: {
+			default: 'arcade',
+			arcade: {
+				gravity: { y: 300 },
+				debug: false
+			}
+		},
+		scene: {
+			preload: preload,
+			create: create,
+			update: update
+		}
+	})
 
-	//  References to the PhaserGame component (game and scene are exposed)
-	let phaserRef: TPhaserRef = { game: null, scene: null }
-	const spritePosition = { x: 0, y: 0 }
+	let platforms = $state(null)
+	let cursors = $state(null)
+	let game = $state(null)
+	let player = $state(null)
 
-	const changeScene = () => {
-		const scene = phaserRef.scene as MainMenu
+	function preload() {
+		this.load.image('sky', 'assets/sky.png')
+		this.load.image('ground', 'assets/platform.png')
+		this.load.image('star', 'assets/star.png')
+		this.load.image('bomb', 'assets/bomb.png')
+		this.load.spritesheet('dude', 'assets/dude.png', {
+			frameWidth: 32,
+			frameHeight: 48
+		})
+	}
+	function create() {
+		this.add.image(400, 300, 'sky')
+		platforms = this.physics.add.staticGroup()
+		platforms.create(400, 568, 'ground').setScale(2).refreshBody()
+		platforms.create(600, 400, 'ground')
+		platforms.create(50, 250, 'ground')
+		platforms.create(750, 220, 'ground')
 
-		if (scene) {
-			// Call the changeScene method defined in the `MainMenu`, `Game` and `GameOver` Scenes
-			scene.changeScene()
+		player = this.physics.add.sprite(100, 450, 'dude')
+
+		player.setBounce(0.2)
+		player.setCollideWorldBounds(true)
+
+		this.anims.create({
+			key: 'left',
+			frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+			frameRate: 10,
+			repeat: -1
+		})
+
+		this.anims.create({
+			key: 'turn',
+			frames: [{ key: 'dude', frame: 4 }],
+			frameRate: 20
+		})
+
+		this.anims.create({
+			key: 'right',
+			frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+			frameRate: 10,
+			repeat: -1
+		})
+		cursors = this.input.keyboard.createCursorKeys()
+		this.physics.add.collider(player, platforms)
+	}
+	function update() {
+		if (cursors.left.isDown) {
+			player.setVelocityX(-160)
+
+			player.anims.play('left', true)
+		} else if (cursors.right.isDown) {
+			player.setVelocityX(160)
+
+			player.anims.play('right', true)
+		} else {
+			player.setVelocityX(0)
+
+			player.anims.play('turn')
+		}
+
+		if (cursors.up.isDown && player.body.touching.down) {
+			player.setVelocityY(-330)
 		}
 	}
 
-	const moveSprite = () => {
-		const scene = phaserRef.scene as MainMenu
+	$effect(() => {
+		game = new Game(config)
 
-		if (scene) {
-			// Get the update logo position
-			;(scene as MainMenu).moveLogo(({ x, y }) => {
-				spritePosition.x = x
-				spritePosition.y = y
-			})
+		return () => {
+			game.destroy()
 		}
-	}
-
-	const addSprite = () => {
-		const scene = phaserRef.scene as Scene
-
-		if (scene) {
-			// Add more stars
-			const x = Phaser.Math.Between(64, scene.scale.width - 64)
-			const y = Phaser.Math.Between(64, scene.scale.height - 64)
-
-			//  `add.sprite` is a Phaser GameObjectFactory method and it returns a Sprite Game Object instance
-			const star = scene.add.sprite(x, y, 'star')
-
-			//  ... which you can then act upon. Here we create a Phaser Tween to fade the star sprite in and out.
-			//  You could, of course, do this from within the Phaser Scene code, but this is just an example
-			//  showing that Phaser objects and systems can be acted upon from outside of Phaser itself.
-			scene.add.tween({
-				targets: star,
-				duration: 500 + Math.random() * 1000,
-				alpha: 0,
-				yoyo: true,
-				repeat: -1
-			})
-		}
-	}
-
-	// Event emitted from the PhaserGame component
-	const currentScene = (scene: Scene) => {
-		canMoveSprite = scene.scene.key !== 'MainMenu'
-	}
-	let sb = $state(false)
-	const toggle = () => {
-		sb = !sb
-	}
+	})
 </script>
 
-<div class="page-layer nwp center">
-	<PhaserGame bind:phaserRef currentActiveScene={currentScene} />
-</div>
-
-<aside
-	class="absolute inset-y-4 transform transition-transform duration-400 ease-in"
-	class:right-12={!sb}
-	class:right-4={sb}
-	class:translate-x-full={!sb}>
-	<div class="flex items-start gap-2">
-		<div>
-			<button onclick={toggle} class="btn btn-square" style="--fs: 16px;">
-				<svg class="nwp-icon"><use xlink:href="#nwp-burger"></use></svg>
-			</button>
-		</div>
-
-		<div class="rounded-box bg-base-100 w-56 p-4 shadow-sm">
-			<div class="grid gap-2">
-				<button class="btn" onclick={changeScene}>Change Scene</button>
-
-				<button class="btn" disabled={canMoveSprite} onclick={moveSprite}
-					>Toggle Movement</button>
-
-				<div class="spritePosition">
-					Sprite Position
-					<pre>{JSON.stringify(spritePosition, null, 2)}</pre>
-				</div>
-
-				<button class="btn" onclick={addSprite}>Add New Sprite</button>
-			</div>
-		</div>
-	</div>
-</aside>
+<div class="page-layer nwp center" id="game-container"><div></div></div>
