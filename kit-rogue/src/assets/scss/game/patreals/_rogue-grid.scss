@@ -1,27 +1,4 @@
-.rogue-tile {
-    --color-base-100: oklch(100% 0 0);
-    --color-base-200: oklch(97% 0 0);
-    --color-base-300: oklch(94% 0 0);
-    --color-base-content: oklch(21% 0.006 56.043);
-    --color-primary: oklch(68% 0.169 237.323);
-    --color-primary-content: oklch(97% 0.013 236.62);
-    --color-secondary: oklch(43% 0 0);
-    --color-secondary-content: oklch(98% 0.001 106.423);
-    --color-accent: oklch(59% 0.249 0.584);
-    --color-accent-content: oklch(97% 0.014 343.198);
-    --color-neutral: oklch(0% 0 0);
-    --color-neutral-content: oklch(100% 0 0);
-    --color-info: oklch(50% 0.134 242.749);
-    --color-info-content: oklch(97% 0.013 236.62);
-    --color-success: oklch(59% 0.145 163.225);
-    --color-success-content: oklch(97% 0.021 166.113);
-    --color-warning: oklch(82% 0.189 84.429);
-    --color-warning-content: oklch(98% 0.022 95.277);
-    --color-error: oklch(57% 0.245 27.325);
-    --color-error-content: oklch(97% 0.013 17.38);
-    --radius-selector: 2rem;
-    --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
+:root {
 	--size: 600px;
 	--gap: 1px;
 	--cols: 30;
@@ -38,16 +15,14 @@
 	padding: var(--gap);
 	position: relative;
 
-	.rogue-tile {
+	.tile {
 		display: grid;
 		grid-template: 1 / 1;
 		aspect-ratio: 1 / 1;
 		position: relative;
 		overflow: hidden;
-		background-color: var(--bs-light);
-		color: var(--bs-gray-300);
-		background-color: var(--color-slate-100);
-		color: var(--color-slate-100);
+		background-color: var(--tile-color);
+		color: var(--tile-color);
 
 		> * {
 			grid-row: 1;
@@ -61,34 +36,17 @@
 			background: var(--gb-primary);
 		}
 	}
+}
 
-	.t-0 {
-		background-color: var(--color-red-600);
-		color: var(--color-red-600);
-	}
+$icons: (
+	'tile': #cbd5e1,
+	'tile-0': #0069a8,
+	'tile-1': #1e293b,
+	
+);
 
-	.t-1 {
-		background-color: var(--color-slate-800);
-		color: var(--color-slate-800);
-	}
-
-	.t-2,
-	.t-3,
-	.t-4,
-	.t-5,
-	.t-6,
-	.t-7,
-	.t-8,
-	.t-9,
-	.t-10 {
-		background-color: var(--color-stone-200);
-		color: var(--color-stone-200);
-	}
-
-	.t-8,
-	.t-9,
-	.t-10 {
-		background-color: var(--color-zinc-200);
-		color: var(--color-zinc-200);
+@each $name, $color in $icons {
+	.#{$name} {
+		--tile-color: #{$color};
 	}
 }
