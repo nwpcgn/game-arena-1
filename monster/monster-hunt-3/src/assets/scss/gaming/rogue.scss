@@ -1,0 +1,117 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.main-gl {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/* --gl-sb: 100px; --gl-foo: 100px; */
+.gl-container {
+	display: grid;
+	grid-template-columns: 3fr var(--gl-sb);
+	grid-template-rows: 2fr var(--gl-foo);
+	gap: var(--spacing-sm);
+	grid-auto-flow: row;
+	width: 960px;
+	aspect-ratio: 4 / 3;
+	transition: all 1s ease-in-out;
+}
+
+.gl-main {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.gl-sb {
+	grid-area: 1 / 2 / 3 / 3;
+}
+
+.gl-bar {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.screnn-main {
+	grid-area: 1 / 1 / 3 / 2;
+}
+
+.screen-foo {
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+:root {
+	--gg-size: 900px;
+	--gg-gap: 1px;
+	--gg-cols: 10;
+	--gg-rows: 10;
+}
+
+.rogue-grid {
+	display: grid;
+	width: var(--gg-size);
+	grid-template-columns: repeat(var(--gg-cols), 1fr);
+	grid-template-rows: repeat(var(--gg-rows), 1fr);
+	gap: var(--gg-gap);
+	padding: var(--gg-gap);
+	position: relative;
+
+	.rogue-tile {
+		display: grid;
+		grid-template: 1 / 1;
+		aspect-ratio: 1 / 1;
+		position: relative;
+		overflow: hidden;
+		background-color: var(--bs-light);
+		color: var(--bs-gray-300);
+
+		> * {
+			grid-row: 1;
+			grid-column: 1;
+			display: grid;
+			place-content: center;
+			overflow: hidden;
+		}
+
+		&.wall {
+			background: var(--gb-medium);
+		}
+
+		&.floor {
+			background: var(--gb-200);
+		}
+
+		.player {
+			background: var(--gb-primary);
+		}
+	}
+
+	.t-1 {
+		background-color: var(--bs-dark);
+		color: var(--bs-dark);
+	}
+
+	.t-0 {
+		background-color: var(--bs-warning);
+		color: var(--bs-warning);
+	}
+}
+
+/* For presentation only, no need to copy the code below */
+.gl-container > * {
+	border: 0.5px solid var(--gb-primary);
+	position: relative;
+	overflow: hidden;
+	border-radius: var(--spacing-sm);
+}

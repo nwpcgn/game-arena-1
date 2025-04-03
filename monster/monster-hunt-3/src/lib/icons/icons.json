@@ -1,0 +1,194 @@
+{
+	"icons": [
+		{
+			"slug": "cols",
+			"name": "Cols",
+			"icon": "nwp-cols"
+		},
+		{
+			"slug": "game",
+			"name": "Game",
+			"icon": "nwp-game"
+		},
+		{
+			"slug": "enemy",
+			"name": "Enemy",
+			"icon": "nwp-enemy"
+		},
+		{
+			"slug": "expand",
+			"name": "Expand",
+			"icon": "nwp-expand"
+		},
+		{
+			"slug": "full",
+			"name": "Full",
+			"icon": "nwp-full"
+		},
+		{
+			"slug": "grid",
+			"name": "Grid",
+			"icon": "nwp-grid"
+		},
+		{
+			"slug": "map_1",
+			"name": "Map_1",
+			"icon": "nwp-map-1"
+		},
+		{
+			"slug": "map_2",
+			"name": "Map_2",
+			"icon": "nwp-map-2"
+		},
+		{
+			"slug": "skull_1",
+			"name": "Skull_1",
+			"icon": "nwp-skull-1"
+		},
+		{
+			"slug": "player",
+			"name": "Player",
+			"icon": "nwp-player"
+		},
+		{
+			"slug": "rows",
+			"name": "Rows",
+			"icon": "nwp-rows"
+		},
+		{
+			"slug": "skull_2",
+			"name": "Skull_2",
+			"icon": "nwp-skull-2"
+		},
+		{
+			"slug": "back",
+			"name": "Back",
+			"icon": "nwp-back"
+		},
+		{
+			"slug": "blank",
+			"name": "Blank",
+			"icon": "nwp-blank"
+		},
+		{
+			"slug": "search",
+			"name": "Search",
+			"icon": "nwp-search"
+		},
+		{
+			"slug": "height",
+			"name": "Height",
+			"icon": "nwp-height"
+		},
+		{
+			"slug": "tag",
+			"name": "Tag",
+			"icon": "nwp-tag"
+		},
+		{
+			"slug": "weight",
+			"name": "Weight",
+			"icon": "nwp-weight"
+		},
+		{
+			"slug": "pokeball",
+			"name": "Pokeball",
+			"icon": "nwp-pokeball"
+		},
+		{
+			"slug": "alert",
+			"name": "Alert",
+			"icon": "nwp-alert"
+		},
+		{
+			"slug": "error",
+			"name": "Error",
+			"icon": "nwp-error"
+		},
+		{
+			"slug": "info",
+			"name": "Info",
+			"icon": "nwp-info"
+		},
+		{
+			"slug": "success",
+			"name": "Success",
+			"icon": "nwp-success"
+		},
+		{
+			"slug": "exit",
+			"name": "Exit",
+			"icon": "nwp-exit"
+		},
+		{
+			"slug": "db",
+			"name": "Db",
+			"icon": "nwp-db"
+		},
+		{
+			"slug": "home",
+			"name": "Home",
+			"icon": "nwp-home"
+		},
+		{
+			"slug": "burger",
+			"name": "Burger",
+			"icon": "nwp-burger"
+		},
+		{
+			"slug": "refresh",
+			"name": "Refresh",
+			"icon": "nwp-refresh"
+		},
+		{
+			"slug": "options",
+			"name": "Options",
+			"icon": "nwp-options"
+		},
+		{
+			"slug": "account",
+			"name": "Account",
+			"icon": "nwp-account"
+		},
+		{
+			"slug": "archive",
+			"name": "Archive",
+			"icon": "nwp-archive"
+		},
+		{
+			"slug": "arrow_left",
+			"name": "Arrow_Left",
+			"icon": "nwp-arrow-left"
+		},
+		{
+			"slug": "arrow_right",
+			"name": "Arrow_Right",
+			"icon": "nwp-arrow-right"
+		},
+		{
+			"slug": "chart",
+			"name": "Chart",
+			"icon": "nwp-chart"
+		},
+		{
+			"slug": "close",
+			"name": "Close",
+			"icon": "nwp-close"
+		},
+		{
+			"slug": "favicon",
+			"name": "Favicon",
+			"icon": "nwp-favicon"
+		},
+		{
+			"slug": "hp",
+			"name": "Hp",
+			"icon": "nwp-hp"
+		},
+		{
+			"slug": "level",
+			"name": "Level",
+			"icon": "nwp-level"
+		}
+	]
+}

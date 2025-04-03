@@ -1,0 +1,7 @@
+{
+	"init": { "name": "Landing", "templ": 0 },
+	"ready": { "name": "Start", "templ": 1 },
+	"running": { "name": "Play", "templ": 2 },
+	"ended": { "name": "Game Over", "templ": 3 },
+	"result": { "name": "Results", "templ": 4 }
+}

@@ -1,0 +1,28 @@
+{
+	"world": {
+		"width": 30,
+		"height": 30,
+		"level": 1,
+		"activeRoom": 2,
+		"map": [
+
+		],
+		"rooms": [
+
+		],
+		"items": [
+
+		],
+		"pos": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	"variables": {
+		"fruits": [
+			"🍇",
+			"🍉",
+			"🍌"
+		]
+	}
+}
