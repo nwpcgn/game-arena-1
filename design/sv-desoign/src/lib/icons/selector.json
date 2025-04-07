@@ -1,0 +1,125 @@
+[
+	{ "slug": "cols", "name": "Cols", "icon": "nwp-cols", "selected": false },
+	{ "slug": "game", "name": "Game", "icon": "nwp-game", "selected": false },
+	{ "slug": "enemy", "name": "Enemy", "icon": "nwp-enemy", "selected": false },
+	{
+		"slug": "expand",
+		"name": "Expand",
+		"icon": "nwp-expand",
+		"selected": false
+	},
+	{ "slug": "full", "name": "Full", "icon": "nwp-full", "selected": false },
+	{ "slug": "grid", "name": "Grid", "icon": "nwp-grid", "selected": false },
+	{ "slug": "map_1", "name": "Map_1", "icon": "nwp-map-1", "selected": false },
+	{ "slug": "map_2", "name": "Map_2", "icon": "nwp-map-2", "selected": false },
+	{
+		"slug": "skull_1",
+		"name": "Skull_1",
+		"icon": "nwp-skull-1",
+		"selected": false
+	},
+	{
+		"slug": "player",
+		"name": "Player",
+		"icon": "nwp-player",
+		"selected": false
+	},
+	{ "slug": "rows", "name": "Rows", "icon": "nwp-rows", "selected": false },
+	{
+		"slug": "skull_2",
+		"name": "Skull_2",
+		"icon": "nwp-skull-2",
+		"selected": false
+	},
+	{ "slug": "back", "name": "Back", "icon": "nwp-back", "selected": false },
+	{ "slug": "blank", "name": "Blank", "icon": "nwp-blank", "selected": false },
+	{
+		"slug": "search",
+		"name": "Search",
+		"icon": "nwp-search",
+		"selected": false
+	},
+	{
+		"slug": "height",
+		"name": "Height",
+		"icon": "nwp-height",
+		"selected": false
+	},
+	{ "slug": "tag", "name": "Tag", "icon": "nwp-tag", "selected": false },
+	{
+		"slug": "weight",
+		"name": "Weight",
+		"icon": "nwp-weight",
+		"selected": false
+	},
+	{
+		"slug": "pokeball",
+		"name": "Pokeball",
+		"icon": "nwp-pokeball",
+		"selected": false
+	},
+	{ "slug": "alert", "name": "Alert", "icon": "nwp-alert", "selected": false },
+	{ "slug": "error", "name": "Error", "icon": "nwp-error", "selected": false },
+	{ "slug": "info", "name": "Info", "icon": "nwp-info", "selected": false },
+	{
+		"slug": "success",
+		"name": "Success",
+		"icon": "nwp-success",
+		"selected": false
+	},
+	{ "slug": "exit", "name": "Exit", "icon": "nwp-exit", "selected": false },
+	{ "slug": "db", "name": "Db", "icon": "nwp-db", "selected": false },
+	{ "slug": "home", "name": "Home", "icon": "nwp-home", "selected": false },
+	{
+		"slug": "burger",
+		"name": "Burger",
+		"icon": "nwp-burger",
+		"selected": false
+	},
+	{
+		"slug": "refresh",
+		"name": "Refresh",
+		"icon": "nwp-refresh",
+		"selected": false
+	},
+	{
+		"slug": "options",
+		"name": "Options",
+		"icon": "nwp-options",
+		"selected": false
+	},
+	{
+		"slug": "account",
+		"name": "Account",
+		"icon": "nwp-account",
+		"selected": false
+	},
+	{
+		"slug": "archive",
+		"name": "Archive",
+		"icon": "nwp-archive",
+		"selected": false
+	},
+	{
+		"slug": "arrow_left",
+		"name": "Arrow_Left",
+		"icon": "nwp-arrow-left",
+		"selected": false
+	},
+	{
+		"slug": "arrow_right",
+		"name": "Arrow_Right",
+		"icon": "nwp-arrow-right",
+		"selected": false
+	},
+	{ "slug": "chart", "name": "Chart", "icon": "nwp-chart", "selected": false },
+	{ "slug": "close", "name": "Close", "icon": "nwp-close", "selected": false },
+	{
+		"slug": "favicon",
+		"name": "Favicon",
+		"icon": "nwp-favicon",
+		"selected": false
+	},
+	{ "slug": "hp", "name": "Hp", "icon": "nwp-hp", "selected": false },
+	{ "slug": "level", "name": "Level", "icon": "nwp-level", "selected": false }
+]

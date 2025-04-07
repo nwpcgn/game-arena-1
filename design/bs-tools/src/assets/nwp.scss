@@ -1,0 +1,74 @@
+// @import 'game/patreals/_vars.scss';
+// @import 'game/patreals/_body.scss';
+// @import 'game/patreals/_main.scss';
+// @import 'game/patreals/_layer.scss';
+// @import 'game/patreals/_content.scss';
+// @import 'game/patreals/_img-grid.scss';
+// @import 'game/patreals/_game-grid.scss';
+// @import 'game/patreals/_game-util.scss';
+// @import 'game/patreals/_svg-icon.scss';
+
+@use 'game/patreals/_vars.scss';
+@use 'game/patreals/_body.scss';
+@use 'game/patreals/_main.scss';
+@use 'game/patreals/_layer.scss';
+@use 'game/patreals/_content.scss';
+@use 'game/patreals/_img-grid.scss';
+@use 'game/patreals/_game-bg.scss';
+// @use 'game/patreals/_rogue-grid.scss';
+@use 'game/patreals/_game-box.scss';
+// @use 'game/patreals/_game-util.scss';
+@use 'game/patreals/_svg-icon.scss';
+// @use 'game/patreals/flip-card.scss';
+@use 'game/patreals/_util.scss';
+// @use 'game/patreals/_splash.scss';
+/* CSS HEX */
+
+
+:root {
+--dark-purple: #280016ff;
+--dark-purple-2: #1A0018ff;
+--amaranth-purple: #B20152ff;
+--murrey: #930365ff;
+--tyrian-purple: #41002Bff;
+
+/* CSS HSL */
+--dark-purple: hsla(327, 100%, 8%, 1);
+--dark-purple-2: hsla(305, 100%, 5%, 1);
+--amaranth-purple: hsla(333, 99%, 35%, 1);
+--murrey: hsla(319, 96%, 29%, 1);
+--tyrian-purple: hsla(320, 100%, 13%, 1);
+
+/* SCSS HEX */
+$dark-purple: #280016ff;
+$dark-purple-2: #1A0018ff;
+$amaranth-purple: #B20152ff;
+$murrey: #930365ff;
+$tyrian-purple: #41002Bff;
+
+/* SCSS HSL */
+$dark-purple: hsla(327, 100%, 8%, 1);
+$dark-purple-2: hsla(305, 100%, 5%, 1);
+$amaranth-purple: hsla(333, 99%, 35%, 1);
+$murrey: hsla(319, 96%, 29%, 1);
+$tyrian-purple: hsla(320, 100%, 13%, 1);
+
+/* SCSS RGB */
+$dark-purple: rgba(40, 0, 22, 1);
+$dark-purple-2: rgba(26, 0, 24, 1);
+$amaranth-purple: rgba(178, 1, 82, 1);
+$murrey: rgba(147, 3, 101, 1);
+$tyrian-purple: rgba(65, 0, 43, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-right: linear-gradient(90deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-bottom: linear-gradient(180deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-left: linear-gradient(270deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-top-right: linear-gradient(45deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-bottom-right: linear-gradient(135deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-top-left: linear-gradient(225deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-bottom-left: linear-gradient(315deg, #280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+$gradient-radial: radial-gradient(#280016ff, #1A0018ff, #B20152ff, #930365ff, #41002Bff);
+
+}
