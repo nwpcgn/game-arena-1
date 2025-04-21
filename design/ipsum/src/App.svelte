@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Start from './views/Start.svelte'
-	import Sprites from './lib/icons/index.svelte'
+	import GotIpsum from './lib/ipsum/GotIpsum.svelte'
+	// import Sprites from './lib/icons/index.svelte'
 </script>
 
 <main class="main">
-	<Start />
+	<GotIpsum />
 </main>
-<Sprites></Sprites>
+<!-- <Sprites></Sprites> -->

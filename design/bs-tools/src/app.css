@@ -1,0 +1,8 @@
+.icon-grid {
+    --min: 98px;
+    --gap: 1rem;
+    --fs: 32px;
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}

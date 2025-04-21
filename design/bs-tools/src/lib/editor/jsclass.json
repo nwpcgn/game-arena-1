@@ -1,0 +1,14 @@
+{
+	"name": "MyClass",
+	"comment": "What does the class do?",
+	"attributes": [
+		{
+			"visibility": "public",
+			"name": "aMyAttrib",
+			"init": "null",
+			"class": "",
+			"comment": "What do you stored in this attribute?"
+		}
+	],
+	"methods": []
+}

@@ -11,7 +11,7 @@
 			icon: 'nwp-game'
 		},
 		{
-			name: 'Icons',
+			name: 'Design',
 			href: '/icons',
 			icon: 'nwp-archive'
 		},

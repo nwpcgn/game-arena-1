@@ -1,0 +1,289 @@
+{
+	"title": "Svg Icons",
+	"schema": {
+		"$schema": "http://json-schema.org/draft-04/schema#",
+		"additionalProperties": true,
+		"title": "Svg-Icons",
+		"definitions": {
+			"comment": {
+				"title": "Comment:",
+				"type": "string",
+				"format": "textarea",
+				"default": ""
+			},
+			"yesno": {
+				"default": "yes",
+				"type": "string",
+				"enum": ["yes", "no"]
+			}
+		},
+		"type": "object",
+		"options": {
+			"disable_collapse": false,
+			"disable_edit_json": false,
+			"disable_properties": false,
+			"collapsed": false,
+			"hidden": false
+		},
+		"defaultProperties": ["icons"],
+		"properties": {
+			"icons": {
+				"type": "array",
+				"id": "/properties/icons",
+				"title": "Icons ",
+				"format": "tabs",
+				"options": {
+					"disable_collapse": false,
+					"disable_array_add": false,
+					"disable_array_delete": false,
+					"disable_array_reorder": false,
+					"disable_properties": false,
+					"collapsed": false,
+					"hidden": false
+				},
+				"items": {
+					"type": "object",
+					"id": "/properties/icons/items",
+					"title": "Icon ",
+					"headerTemplate": "#nwp-{{ self.slug }}",
+					"options": {
+						"disable_collapse": false,
+						"disable_edit_json": false,
+						"disable_properties": false,
+						"collapsed": false,
+						"hidden": false
+					},
+					"defaultProperties": ["slug", "name", "icon"],
+					"properties": {
+						"slug": {
+							"type": "string",
+							"id": "/properties/icons/items/properties/slug",
+							"title": "Slug",
+							"format": "text",
+							"options": {
+								"hidden": false
+							},
+							"propertyOrder": 10
+						},
+						"name": {
+							"type": "string",
+							"id": "/properties/icons/items/properties/name",
+							"title": "Name",
+							"format": "text",
+							"options": {
+								"hidden": false
+							},
+							"propertyOrder": 20
+						},
+						"icon": {
+							"type": "string",
+							"id": "/properties/icons/items/properties/icon",
+							"title": "Icon",
+							"format": "text",
+							"options": {
+								"hidden": false
+							},
+							"propertyOrder": 30
+						}
+					}
+				},
+				"propertyOrder": 10
+			}
+		}
+	},
+	"startval": {
+		"icons": [
+			{
+				"slug": "cols",
+				"name": "Cols",
+				"icon": "nwp-cols"
+			},
+			{
+				"slug": "game",
+				"name": "Game",
+				"icon": "nwp-game"
+			},
+			{
+				"slug": "enemy",
+				"name": "Enemy",
+				"icon": "nwp-enemy"
+			},
+			{
+				"slug": "expand",
+				"name": "Expand",
+				"icon": "nwp-expand"
+			},
+			{
+				"slug": "full",
+				"name": "Full",
+				"icon": "nwp-full"
+			},
+			{
+				"slug": "grid",
+				"name": "Grid",
+				"icon": "nwp-grid"
+			},
+			{
+				"slug": "map_1",
+				"name": "Map_1",
+				"icon": "nwp-map-1"
+			},
+			{
+				"slug": "map_2",
+				"name": "Map_2",
+				"icon": "nwp-map-2"
+			},
+			{
+				"slug": "skull_1",
+				"name": "Skull_1",
+				"icon": "nwp-skull-1"
+			},
+			{
+				"slug": "player",
+				"name": "Player",
+				"icon": "nwp-player"
+			},
+			{
+				"slug": "rows",
+				"name": "Rows",
+				"icon": "nwp-rows"
+			},
+			{
+				"slug": "skull_2",
+				"name": "Skull_2",
+				"icon": "nwp-skull-2"
+			},
+			{
+				"slug": "back",
+				"name": "Back",
+				"icon": "nwp-back"
+			},
+			{
+				"slug": "blank",
+				"name": "Blank",
+				"icon": "nwp-blank"
+			},
+			{
+				"slug": "search",
+				"name": "Search",
+				"icon": "nwp-search"
+			},
+			{
+				"slug": "height",
+				"name": "Height",
+				"icon": "nwp-height"
+			},
+			{
+				"slug": "tag",
+				"name": "Tag",
+				"icon": "nwp-tag"
+			},
+			{
+				"slug": "weight",
+				"name": "Weight",
+				"icon": "nwp-weight"
+			},
+			{
+				"slug": "pokeball",
+				"name": "Pokeball",
+				"icon": "nwp-pokeball"
+			},
+			{
+				"slug": "alert",
+				"name": "Alert",
+				"icon": "nwp-alert"
+			},
+			{
+				"slug": "error",
+				"name": "Error",
+				"icon": "nwp-error"
+			},
+			{
+				"slug": "info",
+				"name": "Info",
+				"icon": "nwp-info"
+			},
+			{
+				"slug": "success",
+				"name": "Success",
+				"icon": "nwp-success"
+			},
+			{
+				"slug": "exit",
+				"name": "Exit",
+				"icon": "nwp-exit"
+			},
+			{
+				"slug": "db",
+				"name": "Db",
+				"icon": "nwp-db"
+			},
+			{
+				"slug": "home",
+				"name": "Home",
+				"icon": "nwp-home"
+			},
+			{
+				"slug": "burger",
+				"name": "Burger",
+				"icon": "nwp-burger"
+			},
+			{
+				"slug": "refresh",
+				"name": "Refresh",
+				"icon": "nwp-refresh"
+			},
+			{
+				"slug": "options",
+				"name": "Options",
+				"icon": "nwp-options"
+			},
+			{
+				"slug": "account",
+				"name": "Account",
+				"icon": "nwp-account"
+			},
+			{
+				"slug": "archive",
+				"name": "Archive",
+				"icon": "nwp-archive"
+			},
+			{
+				"slug": "arrow_left",
+				"name": "Arrow_Left",
+				"icon": "nwp-arrow-left"
+			},
+			{
+				"slug": "arrow_right",
+				"name": "Arrow_Right",
+				"icon": "nwp-arrow-right"
+			},
+			{
+				"slug": "chart",
+				"name": "Chart",
+				"icon": "nwp-chart"
+			},
+			{
+				"slug": "close",
+				"name": "Close",
+				"icon": "nwp-close"
+			},
+			{
+				"slug": "favicon",
+				"name": "Favicon",
+				"icon": "nwp-favicon"
+			},
+			{
+				"slug": "hp",
+				"name": "Hp",
+				"icon": "nwp-hp"
+			},
+			{
+				"slug": "level",
+				"name": "Level",
+				"icon": "nwp-level"
+			}
+		]
+	},
+	"theme": "bootstrap5"
+}

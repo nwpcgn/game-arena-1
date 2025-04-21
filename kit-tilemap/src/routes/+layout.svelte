@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../assets/scss/game/game.scss'
+	import '../assets/scss/retro.scss'
 	import '../app.css'
 	import Sprites from '$lib/icons/index.svelte'
 	import Header from '$lib/Header.svelte'

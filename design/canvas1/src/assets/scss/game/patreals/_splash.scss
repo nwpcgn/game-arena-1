@@ -1,0 +1,199 @@
+// ----------------------------------------------------------------- //
+.splash-screen {
+	grid-row: 1;
+	grid-column: 1;
+	position: relative;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: grid;
+	place-content: center;
+	background-color: #1e1e1e;
+	transition:
+		transform 400ms ease-in-out,
+		opacity 280ms ease-in 100ms;
+	z-index: -1;
+	opacity: 0.1;
+
+	&.active {
+		z-index: 100;
+		opacity: 1;
+	}
+}
+
+.splash-screen-1 {
+	.svg-frame {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		transform-style: preserve-3d;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 2rem;
+	}
+
+	.svg-frame svg {
+		position: absolute;
+		transition: 0.5s;
+		z-index: calc(1 - (0.2 * var(--j)));
+		transform-origin: center;
+		width: 344px;
+		height: 344px;
+		fill: none;
+	}
+
+	.svg-frame:hover svg {
+		transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i)))
+			translateY(calc(-35px * var(--i)));
+	}
+
+	.svg-frame svg #center {
+		transition: 0.5s;
+		transform-origin: center;
+	}
+
+	.svg-frame:hover svg #center {
+		transform: rotate(-30deg) translateX(45px) translateY(-3px);
+	}
+
+	#out2 {
+		animation: rotate16 7s ease-in-out infinite alternate;
+		transform-origin: center;
+	}
+
+	#out3 {
+		animation: rotate16 3s ease-in-out infinite alternate;
+		transform-origin: center;
+		stroke: #ff0;
+	}
+
+	#inner3,
+	#inner1 {
+		animation: rotate16 4s ease-in-out infinite alternate;
+		transform-origin: center;
+	}
+
+	#center1 {
+		fill: #ff0;
+		animation: rotate16 2s ease-in-out infinite alternate;
+		transform-origin: center;
+	}
+}
+
+.splash-screen-2 {
+	/* From Uiverse.io by ahmedyasserdev */
+	/* Centering the loader */
+	.loading-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		/* Ensure full-page centering if needed */
+	}
+
+	/* Loader container */
+	.loader {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		width: 80px;
+		height: 80px;
+		transform: rotate(45deg);
+		animation: rotateLoader 2s cubic-bezier(0.6, 0.2, 0.1, 1) infinite;
+	}
+
+	/* Cubes */
+	.cube {
+		width: 35px;
+		height: 35px;
+		background: linear-gradient(145deg, #00e4ff, #006aff);
+		border-radius: 12px;
+		box-shadow:
+			0 0 12px rgba(0, 228, 255, 0.6),
+			inset 0 0 8px rgba(0, 228, 255, 0.8),
+			inset 3px 3px 8px rgba(0, 50, 120, 0.4);
+		animation: pulse 1.6s ease-in-out infinite;
+		transition: transform 0.4s ease;
+	}
+
+	/* Smooth scaling animation */
+	@keyframes pulse {
+		0%,
+		100% {
+			transform: scale(1);
+			box-shadow:
+				0 0 15px rgba(0, 228, 255, 0.7),
+				inset 0 0 8px rgba(0, 228, 255, 0.8);
+		}
+
+		50% {
+			transform: scale(1.3);
+			box-shadow:
+				0 0 25px rgba(0, 228, 255, 1),
+				inset 0 0 12px rgba(0, 228, 255, 1);
+		}
+	}
+
+	/* Rotating loader animation */
+	@keyframes rotateLoader {
+		0% {
+			transform: rotate(45deg);
+		}
+
+		50% {
+			transform: rotate(225deg);
+		}
+
+		100% {
+			transform: rotate(405deg);
+		}
+	}
+
+	/* Staggered animation for individual cubes */
+	.cube:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.cube:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.cube:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	.cube:nth-child(4) {
+		animation-delay: 0.6s;
+	}
+}
+
+#toggle1 {
+	~ .splash-screen-1 {
+		z-index: 100;
+		opacity: 1;
+	}
+
+	~ .splash-screen-2 {
+		z-index: -1;
+		opacity: 0;
+	}
+}
+
+#toggle1:checked {
+	~ .splash-screen-1 {
+		z-index: -1;
+		opacity: 0;
+	}
+
+	~ .splash-screen-2 {
+		z-index: 100;
+		opacity: 1;
+	}
+}
+
+@keyframes rotate16 {
+	to {
+		transform: rotate(360deg);
+	}
+}

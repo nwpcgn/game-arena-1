@@ -2,6 +2,6 @@
 	let { children } = $props()
 </script>
 
-<main class="main game-bg">
+<main class="main">
 	{@render children?.()}
 </main>

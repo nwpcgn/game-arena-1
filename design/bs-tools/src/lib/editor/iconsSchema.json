@@ -1,0 +1,91 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": true,
+	"title": "Svg-Icons",
+	"definitions": {
+		"comment": {
+			"title": "Comment:",
+			"type": "string",
+			"format": "textarea",
+			"default": ""
+		},
+		"yesno": {
+			"default": "yes",
+			"type": "string",
+			"enum": ["yes", "no"]
+		}
+	},
+	"type": "object",
+	"options": {
+		"disable_collapse": false,
+		"disable_edit_json": false,
+		"disable_properties": false,
+		"collapsed": false,
+		"hidden": false
+	},
+	"defaultProperties": ["icons"],
+	"properties": {
+		"icons": {
+			"type": "array",
+			"id": "/properties/icons",
+			"title": "Icons ",
+			"format": "tabs",
+			"options": {
+				"disable_collapse": false,
+				"disable_array_add": false,
+				"disable_array_delete": false,
+				"disable_array_reorder": false,
+				"disable_properties": false,
+				"collapsed": false,
+				"hidden": false
+			},
+			"items": {
+				"type": "object",
+				"id": "/properties/icons/items",
+				"title": "Icon ",
+				"headerTemplate": "#nwp-{{ self.slug }}",
+				"options": {
+					"disable_collapse": false,
+					"disable_edit_json": false,
+					"disable_properties": false,
+					"collapsed": false,
+					"hidden": false
+				},
+				"defaultProperties": ["slug", "name", "icon"],
+				"properties": {
+					"slug": {
+						"type": "string",
+						"id": "/properties/icons/items/properties/slug",
+						"title": "Slug",
+						"format": "text",
+						"options": {
+							"hidden": false
+						},
+						"propertyOrder": 10
+					},
+					"name": {
+						"type": "string",
+						"id": "/properties/icons/items/properties/name",
+						"title": "Name",
+						"format": "text",
+						"options": {
+							"hidden": false
+						},
+						"propertyOrder": 20
+					},
+					"icon": {
+						"type": "string",
+						"id": "/properties/icons/items/properties/icon",
+						"title": "Icon",
+						"format": "text",
+						"options": {
+							"hidden": false
+						},
+						"propertyOrder": 30
+					}
+				}
+			},
+			"propertyOrder": 10
+		}
+	}
+}

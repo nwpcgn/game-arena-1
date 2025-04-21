@@ -5,3 +5,11 @@
 		dark --prefersdark,
 		cupcake;
 }
+
+
+#view p {
+	margin: 0;
+	padding: 0;
+	line-height: 15px;
+	text-align: center;
+  }

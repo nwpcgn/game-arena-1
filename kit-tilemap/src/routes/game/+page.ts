@@ -1,5 +1,8 @@
+import maps from './maps.json'
+
 export async function load() {
 	return {
-		title: 'Game'
+		title: 'Game',
+		maps: maps
 	}
 }

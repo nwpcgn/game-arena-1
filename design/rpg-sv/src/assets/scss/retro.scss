@@ -1,0 +1,23 @@
+// @use '_vars.scss';
+// @use 'retro/index.scss';
+// @use 'retro/_got-generator.scss';
+@use 'gui/_vars.scss';
+@use 'gui/index.scss';
+@use 'gui/_got-generator.scss';
+@use 'gui/game-box';
+@use 'gui/game-box-hd';
+@use 'gui/gb-box';
+@use 'gui/_layout';
+
+/* @use 'patreals/_vars.scss';
+@use 'patreals/_body.scss';
+@use 'patreals/_main.scss';
+@use 'patreals/_layer.scss';
+@use 'patreals/_content.scss';
+@use 'patreals/_img-grid.scss';
+@use 'patreals/_game-grid.scss';
+@use 'patreals/_game-util.scss';
+@use 'patreals/_svg-icon.scss';
+@use 'patreals/flip-card.scss';
+@use 'patreals/_util.scss';
+@use 'patreals/_splash.scss'; */
